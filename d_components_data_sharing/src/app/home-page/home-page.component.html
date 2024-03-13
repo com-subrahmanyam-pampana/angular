@@ -1,0 +1,20 @@
+
+<div>
+    <!-- Text interpolation -->
+    <p>Welcome {{currentCustomer}}</p>
+</div>
+
+<div>
+    <!-- property binding -->
+    <input type="text" [value]="firstName" />
+</div>
+<p></p>
+<div>
+    <button (click)="onButtonClicked($event)">Click Me!!!</button>
+    <!-- $event is similar to the event object emitted. 
+    It is a special symbol in Angular. -->
+</div>
+
+<div>
+    <app-simple></app-simple>
+</div>
