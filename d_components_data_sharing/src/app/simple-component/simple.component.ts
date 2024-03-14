@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-simple',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './simple.component.html'
 })
 export class SimpleComponent {
+  @Input() item = ''; // decorate the property with @Input()
+
+ 
+  /*Send data to parent component from this child component */
+  @Output() newItemEvent = new EventEmitter<number>();
+
+  addNewItem(value: number) {
+    this.newItemEvent.emit(value);
+  }
 
 }

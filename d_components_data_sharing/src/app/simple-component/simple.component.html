@@ -1,1 +1,10 @@
-<p>simple works!</p>
+<div style="background-color: antiquewhite;">
+    <!-- "item" value will be received from  parent  -->
+    <p>
+        Today's item: {{item}}
+    </p>
+    <div>
+        <!-- Let send some data to the parent from this child -->
+        <button (click)="addNewItem(1)">Counter </button>
+    </div>
+</div>

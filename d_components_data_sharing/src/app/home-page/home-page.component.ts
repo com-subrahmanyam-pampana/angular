@@ -8,18 +8,11 @@ import {SimpleComponent} from '../simple-component/simple.component'
   templateUrl: './home-page.component.html'
 })
 export class HomePageComponent {
-  /*In this Angular component we have a
-   currentCustomer variable */
-   currentCustomer = 'Maria';
-   /*We used this in the html page as Text Interpolation */
+  currentItem = 'Television';
 
-   firstName = 'Enter your first name'
-   /*Event Binding:On clicking the button this 
-   method will fire
-   */
-   onButtonClicked(event:any){
-     alert("You clicked me.....")
-     console.log(event)
-   }
-  
+  addItem(event:any){
+    console.log("I am in the parent:Received an event from child")
+    console.log(event)
+  }
+
 }
