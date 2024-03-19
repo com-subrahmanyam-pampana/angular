@@ -1,0 +1,12 @@
+<div>
+    <child-component [item]="currentItem" (newItemEvent)="addItem($event)">
+
+    </child-component>
+
+
+    <!-- You can alos pass the item value directly without using 
+     property binding -->
+    <child-component item="Mobile Phone" (newItemEvent)="addItem($event)">
+
+    </child-component>
+</div>
