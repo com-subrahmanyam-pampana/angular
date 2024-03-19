@@ -1,12 +1,20 @@
 <div>
-    <child-component [item]="currentItem" (newItemEvent)="addItem($event)">
+    <child-component >
 
     </child-component>
 
+   <div>
+    <child2-component [questionNumber]="1" [question]="'What is your name'">
+        <div class="single-slot">
+            <input type="text" name="single-standard-name" id="single-standard-name">
+        </div>
+    </child2-component>
+    <child2-component [questionNumber]="2" [question]="'What is your surname'">
+        <div class="single-slot">
+            <input type="text" name="single-standard-surname" id="single-standard-surname">
+        </div>
+    </child2-component>
+   </div>
 
-    <!-- You can alos pass the item value directly without using 
-     property binding -->
-    <child-component item="Mobile Phone" (newItemEvent)="addItem($event)">
 
-    </child-component>
 </div>
