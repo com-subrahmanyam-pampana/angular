@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-simple',
+  selector: 'child-component',
   standalone: true,
   imports: [],
-  templateUrl: './simple.component.html'
+  templateUrl: './child.component.html'
 })
-export class SimpleComponent {
+export class ChildComponent {
   @Input() item = ''; // decorate the property with @Input()
 
  

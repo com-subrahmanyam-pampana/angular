@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import {SimpleComponent} from '../simple-component/simple.component'
+import {ChildComponent} from '../child-component/child.component'
 
 @Component({
-  selector: 'app-home-page',
+  selector: 'parent-component-page',
   standalone: true,
-  imports: [SimpleComponent],
-  templateUrl: './home-page.component.html'
+  imports: [ChildComponent],
+  templateUrl: './parent.component.html'
 })
-export class HomePageComponent {
+export class ParentComponent {
   currentItem = 'Television';
 
   addItem(event:any){
