@@ -1,0 +1,11 @@
+<div style="background-color: rgb(250, 215, 249); padding-top: 12;">
+    <div *ngIf="isLoggedIn; else loggedOut">
+        Welcome back.
+     </div>
+      <ng-template #loggedOut>
+        Please login.
+      </ng-template>
+</div>
+
+
+  

@@ -1,20 +1,44 @@
 <div>
-    <child-component >
+    <!-- No content projection -->
+    <child-component>
 
     </child-component>
 
-   <div>
-    <child2-component [questionNumber]="1" [question]="'What is your name'">
-        <div class="single-slot">
-            <input type="text" name="single-standard-name" id="single-standard-name">
-        </div>
-    </child2-component>
-    <child2-component [questionNumber]="2" [question]="'What is your surname'">
-        <div class="single-slot">
-            <input type="text" name="single-standard-surname" id="single-standard-surname">
-        </div>
-    </child2-component>
-   </div>
+    <!-- Single-slot content projection -->
+    <div>
+        <child2-component [questionNumber]="1" [question]="'What is your name'">
+            <div class="single-slot">
+                <input type="text" name="single-standard-name" id="single-standard-name">
+            </div>
+        </child2-component>
+        <child2-component [questionNumber]="2" [question]="'What is your surname'">
+            <div class="single-slot">
+                <input type="text" name="single-standard-surname" id="single-standard-surname">
+            </div>
+        </child2-component>
 
+        <child2-component [questionNumber]="3" [question]="'What is your birth year'">
+            <div class="single-slot">
+                <input type="number" name="single-standard-year" id="single-standard-year">
+            </div>
+        </child2-component>
+    </div>
+    <!-- 
+    Multi-slot content projection -->
+    <div>
+        <child3-component>
+            <p question>
+                Is content projection cool?
+            </p>
+            <p>Let's learn about content projection!</p>
+        </child3-component>
+    </div>
 
+    <!-- 
+    Conditional content projection -->
+
+    <div>
+        <child4-component>
+        </child4-component>
+    </div>
 </div>
