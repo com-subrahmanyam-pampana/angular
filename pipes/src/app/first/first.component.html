@@ -15,7 +15,26 @@
 <div>
     <h1>AsyncPipe</h1>
     <!-- {{ obj_expression | async }} -->
-
-    <button (click)="clicked()">{{ arrived ? 'Reset' : 'Resolve' }}</button>
+    <button (click)="clicked()">Click me to Resolve</button>
     <span>Wait for it... {{ greeting | async }}</span>
+</div>
+
+<div>
+    <!-- JsonPipe Converts a value into its JSON-format
+         representation. Useful for debugging.
+            {{ value_expression | json }}
+    -->
+    <h1>JsonPipe</h1>
+    <p>Without JSON pipe:</p>
+    <pre>{{ myObject }}</pre>
+    <p>With JSON pipe:</p>
+    <pre>{{ myObject | json }}</pre>
+</div>
+
+<div>
+    <h1> Chaining two pipes together</h1>
+    <p>
+        The chained  today's date is
+        {{ today | date | uppercase}}
+      </p>
 </div>
