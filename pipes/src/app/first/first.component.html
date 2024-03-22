@@ -1,0 +1,21 @@
+<div>
+    <!-- DatePipe Formats a date value according to locale rules.  
+     {{ value_expression | date [ : format [ : timezone [ : locale ] ] ] }}
+    -->
+    <h1>Date Pipe </h1>
+    <p>Today is {{today | date}}</p>
+    <p>Today is {{ today | date:"MMM dd, yyyy 'at' hh:mm a" }} </p>
+</div>
+
+<div>
+    <h1>UpperCase Pipe</h1>
+    <p>{{"subbu" | uppercase }}</p>
+</div>
+
+<div>
+    <h1>AsyncPipe</h1>
+    <!-- {{ obj_expression | async }} -->
+
+    <button (click)="clicked()">{{ arrived ? 'Reset' : 'Resolve' }}</button>
+    <span>Wait for it... {{ greeting | async }}</span>
+</div>
