@@ -1,1 +1,10 @@
-<p>first works!</p>
+<h1>Built-in attribute directives</h1>
+
+<div>
+    <!-- toggle the "special" class on/off with a property -->
+    <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+</div>
+
+<div [ngStyle]="currentStyles">
+    This div is initially italic, normal weight, and extra large (24px).
+</div>
