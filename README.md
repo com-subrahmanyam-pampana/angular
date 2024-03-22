@@ -22,3 +22,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 # To create service 
 ng generate service heroes/hero
+# To create the component
+ng generate component first
