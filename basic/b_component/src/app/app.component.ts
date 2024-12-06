@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomePageComponent } from '../app/home-page/home-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 /*We are importing the component HomePageComponent */
