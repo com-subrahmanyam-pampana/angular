@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Example</title>
+  <script src="https://unpkg.com/@angular/core@16.1.5/bundles/core.umd.js"></script>
+  <script src="https://unpkg.com/@angular/platform-browser@16.1.5/bundles/platform-browser.umd.js"></script>
+  <script src="https://unpkg.com/@angular/platform-browser-dynamic@16.1.5/bundles/platform-browser-dynamic.umd.js"></script>
+  <script src="https://unpkg.com/zone.js@0.13.0/dist/zone.min.js"></script>
+  <script src="https://unpkg.com/rxjs@7.5.7/bundles/rxjs.umd.min.js"></script>
+</head>
+<body>
+  <!-- Angular Application -->
+  <app-root>Loading...</app-root>
+
+  <script>
+    // Import Angular Modules
+    const { Component, NgModule, enableProdMode } = ng.core;
+    const { BrowserModule } = ng.platformBrowser;
+    const { platformBrowserDynamic } = ng.platformBrowserDynamic;
+
+    // Define the root component
+    @Component({
+      selector: 'app-root',
+      template: `
+        <h1>Welcome to Angular!</h1>
+        <p>{{ message }}</p>
+        <input [(ngModel)]="message" placeholder="Type something here" />
+        <button (click)="resetMessage()">Reset</button>
+      `,
+    })
+    class AppComponent {
+      message = 'Hello, Angular!';
+
+      resetMessage() {
+        this.message = 'Hello, Angular!';
+      }
+    }
+
+    // Define the root module
+    @NgModule({
+      declarations: [AppComponent],
+      imports: [BrowserModule],
+      bootstrap: [AppComponent],
+    })
+    class AppModule {}
+
+    // Bootstrap the Angular app
+    enableProdMode();
+    platformBrowserDynamic()
+      .bootstrapModule(AppModule)
+      .catch((err) => console.error(err));
+  </script>
+</body>
+</html>
