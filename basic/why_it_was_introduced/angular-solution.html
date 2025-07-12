@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Example</title>
+    <!-- Include AngularJS via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="myCtrl">
+        <input ng-model="item" placeholder="Enter item">
+        <button ng-click="addItem()">Add</button>
+        <ul>
+            <li ng-repeat="i in items">{{ i }}</li>
+        </ul>
+    </div>
+
+    <script>
+        // Define the AngularJS application and controller
+        angular.module('myApp', [])
+            .controller('myCtrl', function ($scope) {
+                $scope.items = [];
+                $scope.addItem = function () {
+                    if ($scope.item) {
+                        $scope.items.push($scope.item);
+                        $scope.item = '';
+                    }
+                };
+            });
+    </script>
+
+</body>
+
+</html>
+
+<!-- Your view is bound to $scope variables. -->

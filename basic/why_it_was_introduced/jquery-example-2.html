@@ -1,0 +1,21 @@
+<!-- You had to manually read the input value and update the DOM when the button was clicked. -->
+
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <input id="item" type="text">
+    <button id="addItem">Add</button>
+    <ul id="list"></ul>
+
+    <script>
+        $('#addItem').click(function () {
+            var value = $('#item').val();
+            $('#list').append('<li>' + value + '</li>');
+        });
+    </script>
+</body>
+</html>

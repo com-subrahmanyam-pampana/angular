@@ -1,0 +1,25 @@
+
+
+<!-- You had to manually read the input value and update the DOM when the button was clicked. -->
+
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <input id="username" type="text" placeholder="Enter your name">
+    <button id="showBtn">Show</button>
+    <p id="greeting">Hello</p>
+    
+    <script>
+        $('#showBtn').click(function () {
+            var name = $('#username').val();
+            $('#greeting').text('Hello, ' + name + '!');
+        });
+    </script>
+
+</body>
+
+</html>
