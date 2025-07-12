@@ -4,22 +4,35 @@ Angular uses data binding to manage the state and automatically update the DOM w
     Interpolation ({{ }}) binds a component's state to the DOM.
     It allows the DOM to automatically update whenever the state changes in the component.
 
+this is one-way binding from component → template (DOM)
+It’s like state management: your template reflects the state held in the component.
 Example:
 
 <h1>{{ message }}</h1>
 
     When the message property in the component changes (via a method or event), Angular updates the DOM content accordingly.
 
+
+
+
 2. Event Binding
 
     Event binding ((event)) allows you to trigger state changes based on user interactions (like clicking a button).
     For example, clicking a button could update a component's state, and the DOM will reflect that change.
+    "Event binding is only when the user does some action, right?"
+    ✅ Yes — it’s one-way from the DOM to the component.
 
 Example:
 
 <button (click)="changeMessage()">Change Message</button>
 
     Here, the changeMessage() method updates the state (message), and Angular will automatically update the DOM to reflect the new value.
+
+
+
+
+
+
 
 3. Two-Way Binding (ngModel)
 
@@ -41,3 +54,9 @@ Angular’s change detection mechanism automatically checks for changes in the c
     The component's state is manually updated (e.g., via this.message = 'new state').
 
 Angular uses a dirty checking mechanism to check whether the component's model (state) has changed and, if so, it updates the DOM to reflect the changes.
+
+
+
+
+
+
